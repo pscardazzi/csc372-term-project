@@ -1,5 +1,5 @@
 import PostItem from "./PostItemComponent";
-//returns  posts
+//returns all posts coming from PostItem inside a general container
 export default function PostList({ posts, onEdit, onDelete }) {
   return (
     <div className="container">

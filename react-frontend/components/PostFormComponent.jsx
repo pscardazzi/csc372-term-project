@@ -1,5 +1,6 @@
+//PostFormComponent.jsx
 import { useState, useEffect } from "react";
-
+//
 export default function PostForm({ onSubmit, existingPost }) {
   const [content, setContent] = useState("");
 
