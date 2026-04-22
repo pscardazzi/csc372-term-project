@@ -1,0 +1,3 @@
+CSC 372 Term Project
+Link to MVP video:
+https://uncg-my.sharepoint.com/:v:/g/personal/p_magalhaes_uncg_edu/IQDCcwY22f5lQKdBpb0QxZGyAbRTqTeDL4THjz82TYE4eNw?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=XvNMKA
