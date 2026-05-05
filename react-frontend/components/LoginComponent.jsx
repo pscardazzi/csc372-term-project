@@ -5,28 +5,32 @@ function LoginComponent({ onLogin }) {
   const [password, setPassword] = useState("");
 
   async function handleLogin(e) {
-    e.preventDefault();
+  e.preventDefault();
 
-    const res = await fetch("http://localhost:3000/api/users/login", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ email, password })
-    });
+  const res = await fetch("http://localhost:3000/api/users/login", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ email, password })
+  });
 
-    if (res.ok) {
-      const data = await res.json();
-
-      const fullName = `${data.first_name} ${data.last_name}`;
-
-      onLogin({
-        userId: data.userId,
-        name: fullName,
-        email: data.email
-      });
-    } else {
-      alert("Invalid login");
-    }
+  if (!res.ok) {
+    alert("Invalid credentials");
+    return;
   }
+
+  const data = await res.json();   // ⭐ define data
+
+  const userData = {
+    userId: data.id,
+    name: `${data.first_name} ${data.last_name}`,
+    email: data.email
+  };
+
+  onLogin(userData);
+
+  // ⭐ persist login
+  localStorage.setItem("user", JSON.stringify(userData));
+}
 
   return (
     <form onSubmit={handleLogin} className="post-form">
