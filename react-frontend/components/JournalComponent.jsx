@@ -14,7 +14,7 @@ export default function JournalPage({user, onLogout}) {
   }, []);
 
   async function loadPosts() {
-    const res = await fetch("api/posts");
+    const res = await fetch(API_URL);
     const data = await res.json();
     setPosts(data);
   }
