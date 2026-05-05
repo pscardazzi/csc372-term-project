@@ -1,5 +1,5 @@
 "use strict";
-const model = require('../models/postModel');
+import model from '../models/postModel.js';
 
 async function fetchAllPosts(req, res) {
     try {
@@ -76,7 +76,7 @@ async function createPost(req, res) {
     }
 }
 
-module.exports = {
+export default {
     fetchAllPosts,
     fetchPostById,
     changePost,

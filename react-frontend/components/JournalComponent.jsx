@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import PostList from "../components/PostListComponent";
 import PostForm from "../components/PostFormComponent";
 
-export default function JournalPage() {
+export default function JournalPage({user, onLogout}) {
   const [posts, setPosts] = useState([]);
   const [editingPost, setEditingPost] = useState(null);
 
@@ -47,9 +47,9 @@ export default function JournalPage() {
 
   return (
     <div className="page-layout">
-
       <main className="journal-content">
         <h1>Pedro's Journal App</h1>
+        <h2>Welcome, {user.name}!</h2>
 
         <PostList
           posts={posts}
@@ -61,6 +61,8 @@ export default function JournalPage() {
           onSubmit={editingPost ? handleUpdate : handleCreate}
           existingPost={editingPost}
         />
+
+        <button onClick={onLogout}>Logout</button>
       </main>
     </div>
   );

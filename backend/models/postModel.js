@@ -1,5 +1,5 @@
 "use strict";
-const pool = require('./dbConnection');
+import pool from './dbConnection.js';
 
 async function getAllPosts(){
     const queryText = "SELECT * FROM journal";
@@ -35,7 +35,7 @@ async function addPost(content) {
     return result.rows[0];
 }
 
-module.exports = {
+export default {
     getAllPosts,
     getOnePostById,
     updatePost,

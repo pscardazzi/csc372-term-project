@@ -1,7 +1,7 @@
-const express = require('express');
-const PostController = require('../controllers/postController');
+import express from "express";
+import PostController from '../controllers/postController.js'
 const router = express.Router();
-const cors = require('cors');
+import cors from "cors";
 
 const corsOptions = {
   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
@@ -16,5 +16,5 @@ router.post('/', PostController.createPost);
 router.put('/:id', PostController.changePost);
 router.delete('/:id', PostController.removePost);
 
-module.exports = router;
+export default router;
 
