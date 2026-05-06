@@ -1,3 +1,5 @@
+/* JournalComponent.jsx: Handles the journal itself, fetching the posts, 
+and displaying them with help of PostList and PostForm. Also handles posting/editing/deleting posts. */
 import { useEffect, useState } from "react";
 import PostList from "../components/PostListComponent";
 import PostForm from "../components/PostFormComponent";

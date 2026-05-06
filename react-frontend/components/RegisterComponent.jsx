@@ -1,3 +1,4 @@
+//RegisterComponent.jsx: Handles registration of a new user.
 import { useState } from "react";
 
 function Register({ onRegister }) {

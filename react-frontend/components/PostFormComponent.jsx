@@ -1,6 +1,7 @@
-//PostFormComponent.jsx
+/* PostFormComponent.jsx: Handles the text box and the button that can be used to create new entries. 
+Also handles editing posts through the site by displaying the original text on the text box, and
+updating the button accordingly. */
 import { useState, useEffect } from "react";
-//
 export default function PostForm({ onSubmit, existingPost }) {
   const [content, setContent] = useState("");
 

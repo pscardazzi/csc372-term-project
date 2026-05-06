@@ -1,3 +1,5 @@
+/* LoginComponent.jsx: Handles login functionality for the app by grabbing the given email and password, and
+trying to do a POST request for the login page. If successful,  */
 import { useState } from "react";
 
 function LoginComponent({ onLogin }) {
@@ -18,7 +20,7 @@ function LoginComponent({ onLogin }) {
     return;
   }
 
-  const data = await res.json();   // ⭐ define data
+  const data = await res.json(); 
 
   const userData = {
     userId: data.id,
@@ -28,7 +30,7 @@ function LoginComponent({ onLogin }) {
 
   onLogin(userData);
 
-  // ⭐ persist login
+  // This helps the login persist on site refresh
   localStorage.setItem("user", JSON.stringify(userData));
 }
 

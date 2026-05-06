@@ -17,7 +17,6 @@ app.use(express.static("public"));
 app.use("/api/posts", postRoutes);
 app.use("/api/users", userRoutes);
 
-
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log("Server listening on port: " + PORT + "!");

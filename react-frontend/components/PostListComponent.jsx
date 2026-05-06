@@ -1,5 +1,6 @@
+//PostListComponent.jsx: returns all posts coming from PostItem inside a general container
 import PostItem from "./PostItemComponent";
-//returns all posts coming from PostItem inside a general container
+
 export default function PostList({ posts, onEdit, onDelete }) {
   return (
     <div className="container">

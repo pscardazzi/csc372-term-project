@@ -1,5 +1,6 @@
+//PostItem.jsx: Creates the box where the posts are displayed, and displays Edit/Delete buttons.
 export default function PostItem({ post, onEdit, onDelete }) {
-  
+  //formats timestamp to look less like it was plucked directly from SQL.
   function formatTimestamp(ts) {
     return new Date(ts).toLocaleString([], {
       timeZone: Intl.DateTimeFormat().resolvedOptions().timeZone,
